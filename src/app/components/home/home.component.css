@@ -1,0 +1,116 @@
+
+
+.navWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.hero-overlay{
+    background:linear-gradient(to right, rgba(0, 24, 47, 0.62)  0%, rgba(0, 24, 47, 0.62) 50%, rgba(0, 24, 47, 0.62) 100%),
+    url('https://s3-alpha-sig.figma.com/img/a731/7c5f/e4588caa4e058178e0eeef893257ac15?Expires=1662336000&Signature=aeJhBQIdFjZvwLxZvWuzqXPc8o7KDWf4qu~0-jJWidc1VkYEVV4wqI0H~nJBK5Y8dXiVKh4jg-OIG5l~a~SDVW~5oDTRTYy84FKCECHpW~Yr3WfWBTFbWQQ5jTxrK3cVCv0im9PUqDh-6-hREYmKa18hRx3uNW9aaRnyAi-LaQM3eO8i9bZwjZwgdioM3YAfHzoVoYoylPocs6sy6yUo8I4dL2BhBmmBAVCaIaMgGwsr9Jgayb~UdjtEwlcSpZv4zSusNXmmTiP--3kCYgISN3DV6Q7bfC1Tg-~X5TJlNoMuebXnvee0x1EMmhhKvLmWe1YzjDQgjSjQwlcpGwjMLw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA') center/cover no-repeat;
+}
+
+.hero-card{
+background: url('/assets/images/vector_1.png');
+}
+
+.broad-image{
+    background:linear-gradient(to right, rgba(58, 98, 111, 0.77) 0%, rgba(58, 98, 111, 0.77) 50%, rgba(58, 98, 111, 0.77) 100%),
+    url('/assets/images/area_3.png')
+}
+
+.house-listing p{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.house-listing h2{
+   color: #616161;
+   font-weight: 800;
+   font-size: 1.2rem;
+   text-transform: capitalize;
+
+}
+.house-listing h3{
+  font-weight: 100;
+  font-size: 1.75rem;
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.696);
+    backdrop-filter: blur(8px);
+    z-index: 4;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modalDetails{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    z-index: 5;
+}
+
+
+footer {
+    background-color: #3A626F;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica Neue, Arial, sans-serif;
+      width: 100%;
+  }
+  
+  /* hr{
+      margin-left: 5%;
+      margin-right: 5%;
+      border: none;
+      height: 1px;
+      background-color: #7d8388;
+  } */
+  .line {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: none;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 3.4rem;
+    margin-bottom: 3rem;
+  }
+  .footP1 {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    line-height: 1.5;
+    gap: 4.3rem;
+  }
+  .footP1 ul {
+    /* display: block; */
+    /* gap: 2rem; */
+    list-style: none;
+  }
+  .footP1 h3 {
+    font-family: Whitney-Bold;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+    color: #7d8388 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px;
+  }
+  .footP1 ul a {
+    text-decoration: none;
+    font-family: Whitney-medium;
+    color: #fff;
+    line-height: 2rem;
+    font-size: 0.9375rem;
+    font-weight: 560;
+  }

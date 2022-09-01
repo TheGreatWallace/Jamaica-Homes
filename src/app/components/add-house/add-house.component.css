@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.formContainer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    background: url('/assets/images/add-form_background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.formWrapper{
+    width: 80%;
+    height: fit-content; 
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 80%;
+    border-radius: 12px;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.49);
+    color: white;
+    backdrop-filter: blur(7px);
+}
+
+h1{
+    text-align: center;
+    color: blue;
+    font-size: 25px;
+}
+
+.labels{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+
+input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid orangered;
+}
+
+input[type="tel"] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid orangered;
+}
+
+input[type="number"] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid orangered;
+}
+
+textarea{
+    border: orangered 2px solid;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+button{
+    background-color: blue;
+    padding: 8px;
+    border-radius: 10px;
+    width: 30%;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* input[type="text"] {
+    border-radius: 30px;
+} */
+  

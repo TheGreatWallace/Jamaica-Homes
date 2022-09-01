@@ -1,0 +1,68 @@
+<div class="formContainer">
+  <div class="formWrapper">
+    <form action="">
+      <h1>House Details</h1>
+      <div class="inputs">
+        <div class="labels">
+          <label for="address">Address:</label>
+          <textarea name="address" id="address" cols="30" rows="3" [(ngModel)]="house.address"></textarea>
+        </div>
+        <div class="labels">
+          <label for="description">Home Description:</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="4"
+            [(ngModel)]="house.description"
+          ></textarea>
+        </div>
+        <div class="labels">
+          <label for="bedrooms">Bedrooms:</label>
+          <input type="number" name="bedrooms" [(ngModel)]="house.bedrooms"/>
+        </div>
+        <div class="labels">
+          <label for="bathrooms">Bathrooms:</label>
+          <input type="number" name="bathrooms" [(ngModel)]="house.bathrooms" />
+        </div>
+        <div class="labels">
+          <label for="interior">Interior Status:</label>
+          <div>
+            <input
+              type="radio"
+              name="interior"
+              id="interior"
+              value="Furnished"
+              [(ngModel)]="house.interior"
+            />Furnished
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="interior"
+              id="interior"
+              value="Unfurnished"
+              [(ngModel)]="house.interior"
+            />Unfurnished
+          </div>
+        </div>
+        <div class="labels">
+          <label for="price">Rent Fee:</label>
+          <input type="number" name="price" placeholder="30000" [(ngModel)]="house.price"/>
+        </div>
+        <br /><br />
+        <h1>Landlord Details</h1>
+        <div class="labels">
+          <label for="landlord">Name:</label>
+          <input type="text" name="landlord" placeholder="Gregory Smith" [(ngModel)]="house.landlord" />
+        </div>
+      </div>
+      <div class="labels">
+        <label for="contact">Contact:</label>
+        <input type="tel" name="contact" placeholder="876-345-1290" [(ngModel)]="house.contact" />
+      </div>
+      <br />
+      <button type="submit" (click)="saveItem()">Submit</button>
+    </form>
+  </div>
+</div>
