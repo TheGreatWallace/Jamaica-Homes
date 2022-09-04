@@ -1,11 +1,11 @@
 <div class="formContainer">
     <div class="overlay">
     <div class="formWrapper">
-        <form action="">
+        <form #loginForm ="ngForm" (submit)="loginUsers(loginForm.value)">
             <h1 style="font-size: 30px; text-align:center">LOGIN</h1>
-            <input placeholder="Username" type="text">
-            <input placeholder="Password" type="password">
-            <button>Login</button>
+            <input placeholder="Username" type="text" name="username" ngModel >
+            <input placeholder="Password" type="password" name="password" ngModel>
+            <button>Submit</button>
         </form>
     </div>
 </div>

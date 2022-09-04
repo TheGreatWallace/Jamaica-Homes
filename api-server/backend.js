@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const housesRoute = require('./routes/housesRoute');
+const usersRoute = require('./routes/usersRoute');
 const db = require('./models');
 const multer = require('multer');
 const cookieParser = require('cookie-parser');
@@ -35,6 +36,7 @@ app.use(cors(corsOptions));
 
 //Setting Route Middleware
 app.use('/api/Jamaica-Homes', housesRoute);
+app.use('/api/Jamaica-Homes', usersRoute);
 
 // app.use(cookieParser());
 //  app.use(session({ 

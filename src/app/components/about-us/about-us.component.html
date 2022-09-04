@@ -6,6 +6,7 @@
           src="/assets/images/Jamaica Housing Logo 1.png"
           alt="Jamaica-Homes Logo"
           width="110px"
+          routerLink="/home"
         />
       </div>
 
@@ -15,12 +16,18 @@
         </li>
         <li><a routerLink="/about" routerLinkActive="router-link-active" >ABOUT US</a></li>
         <li> <a routerLink="/contact" routerLinkActive="router-link-active" >CONTACT US</a></li>
-        <li>FLOOR PLAN</li>
+        <li>
+          <a
+						routerLink="/userAdd"
+						routerLinkActive="router-link-active"
+						>ADD YOUR HOUSE</a
+					>
+        </li>
       </ul>
 
       <div class="navButtons uppercase text-white flex gap-3">
         <button routerLink="/login">LOG IN</button>
-        <button class="bg-blue-700 px-2" routerLink="/login">SIGN UP</button>
+        <button class="bg-blue-700  p-2 rounded-xl" routerLink="/login">SIGN UP</button>
       </div>
     </div>
   </nav>

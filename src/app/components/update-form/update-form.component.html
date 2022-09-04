@@ -1,45 +1,53 @@
 <div class="formContainer">
-    <div class="formWrapper" *ngIf="house._id">
-       <form action="">
+  <div class="border">
+    <div class="aesthetics">
+      <img src="/assets/images/update-form-img.jpg"  alt="">
+    </div>
+      <div class="formWrapper">
+        <form action="">
           <h1>House Details</h1>
           <div class="inputs">
             <div class="labels">
               <label for="address">Address:</label>
-              <textarea name="address" id="address" cols="20" rows="4" [(ngModel)]="house.address"></textarea>
+              <textarea name="address" id="address" cols="30" rows="3" [(ngModel)]="house.address"></textarea>
             </div>
             <div class="labels">
               <label for="description">Home Description:</label>
-              <textarea name="description" id="description" cols="20" rows="10" [(ngModel)]="house.description"></textarea>
+              <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="4"
+                [(ngModel)]="house.description"
+              ></textarea>
             </div>
             <div class="labels">
               <label for="bedrooms">Bedrooms:</label>
-              <input type="number" name="bedrooms" value="" [(ngModel)]="house.bedrooms">
+              <input type="number" name="bedrooms" [(ngModel)]="house.bedrooms"/>
             </div>
             <div class="labels">
               <label for="bathrooms">Bathrooms:</label>
-              <input type="number" name="bathrooms" value="" [(ngModel)]="house.bathrooms">
+              <input type="number" name="bathrooms" [(ngModel)]="house.bathrooms" />
             </div>
             <div class="labels">
-              <label for="interior">Interior Status:</label>
-              <input type="radio" name="interior" id="interior" value="Furnished" [(ngModel)]="house.interior">
-              <input type="radio" name="interior" id="interior" value="Unfurnished" [(ngModel)]="house.interior" >
+              <label for="price">Rent Fee:</label>
+              <input type="number" name="price" placeholder="30000" [(ngModel)]="house.price"/>
             </div>
-            <div class="labels">
-               <label for="price">Rent Fee:</label>
-               <input type="number" name="price" placeholder="30000" value="}" [(ngModel)]="house.price">
-            </div>
-            <br><br>
+            <br /><br />
             <h1>Landlord Details</h1>
-            <label for="landlord">Name:</label>
-            <input type="text" name="landlord" placeholder="Gregory Smith" value="" [(ngModel)]="house.landlord">
+            <div class="labels">
+              <label for="landlord">Name:</label>
+              <input type="text" name="landlord" placeholder="Gregory Smith" [(ngModel)]="house.landlord" />
+            </div>
           </div>
-          <div>
-              <label for="contact">Contact:</label>
-              <input type="tel" name="contact" placeholder="876-345-1290" value="" [(ngModel)]="house.contact">
+          <div class="labels">
+            <label for="contact">Contact:</label>
+            <input type="tel" name="contact" placeholder="876-345-1290" [(ngModel)]="house.contact" />
           </div>
-          <br>
+          <br />
           <button type="submit" (click)="updateItem()">Update</button>
-       </form>
-    </div>
+        </form>
+      </div>
+  </div>
   </div>
   

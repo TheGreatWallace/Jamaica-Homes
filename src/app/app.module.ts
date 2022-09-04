@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,9 @@ import { UpdateFormComponent } from './components/update-form/update-form.compon
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
+import { UserAddHouseComponent } from './components/user-add-house/user-add-house.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     UpdateFormComponent,
     SideBarComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    UnderConstructionComponent,
+    UserAddHouseComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     HttpClientModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
 
   ],
   providers: [],

@@ -41,6 +41,18 @@ background: url('/assets/images/vector_1.png');
   font-size: 1.75rem;
 }
 
+.navWrapper li a{
+  padding: 1em;
+}
+
+.navWrapper li a:hover{
+   background-color: #F1BC6C;
+   color: white;
+   padding: 1em;
+   border-radius: 5px;
+}
+
+
 .modal{
     position: fixed;
     width: 100%;
@@ -61,6 +73,12 @@ background: url('/assets/images/vector_1.png');
     z-index: 5;
 }
 
+.flexMe{
+  display: flex;
+  flex-direction: row;
+  margin: 6px;
+  justify-content: flex-end;
+}
 
 footer {
     background-color: #3A626F;
@@ -102,7 +120,7 @@ footer {
     font-family: Whitney-Bold;
     font-size: 0.9375rem;
     line-height: 1.125rem;
-    color: #7d8388 !important;
+    color: rgba(0, 0, 0, 0.614) !important;
     text-transform: uppercase !important;
     letter-spacing: 1px;
   }

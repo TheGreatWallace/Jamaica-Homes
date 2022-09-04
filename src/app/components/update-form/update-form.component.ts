@@ -60,7 +60,7 @@ export class UpdateFormComponent implements OnInit {
       .subscribe({
         next: (res) => {
           this.message = res.message ? res.message : 'This House was updated successfully!';
-          this.router.navigate(["/home"])
+          this.router.navigate(["/admin"])
         },
         error: (e) => console.error(e)
       });

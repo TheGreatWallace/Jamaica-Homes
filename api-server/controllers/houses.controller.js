@@ -1,10 +1,10 @@
 const db = require('../models/index');
 const House = db.houses
 
-// Create and Save a new Landlord
+// Create and Save 
 exports.create = (req,res) => {
     //Validate Request
-    if(!req.body.landlord){
+    if(!req.body){
         res.status(400).send({message: "Cannot be empty!"});
         return
     }
@@ -92,7 +92,7 @@ exports.findHouseById = (req, res) => {
   // Delete a House with the specified id in the request
   exports.deleteHouse = (req,res)=>{
     const id = req.params.id;
-    House.findOneAndRemove(id,  { useFindAndModify: false }).then(data => {
+    House.findByIdAndRemove(id).then(data => {
         if(!data){
             res.status(404).send({
                 message: `Cannot find house with id ${id} to delete.`

@@ -1,191 +1,232 @@
 <div class="hero-overlay w-full h-screen relative text-[10px]">
-  <!-- nav-start -->
-  <nav class="bg-[#000000C2] h-min z-[999]">
-    <div class="navWrapper">
-      <div class="logo">
-        <img
-          src="/assets/images/Jamaica Housing Logo 1.png"
-          alt="Jamaica-Homes Logo"
-          width="110px"
-        />
-      </div>
+	<!-- nav-start -->
+	<nav class="bg-[#000000C2] h-min z-[999]">
+		<div class="navWrapper">
+			<div class="logo">
+				<img
+					src="/assets/images/Jamaica Housing Logo 1.png"
+					alt="Jamaica-Homes Logo"
+					width="110px"
+				/>
+			</div>
 
-      <ul class="flex justify-between items-center text-white gap-5">
-        <li class="text-[#F1BC6C]">
-          <a routerLink="/home">HOME</a>
-        </li>
-        <a routerLink="/about" routerLinkActive="router-link-active" >ABOUT US</a>
-        <li><a routerLink="/contact" routerLinkActive="router-link-active"  routerLinkActive="router-link-active" >CONTACT US</a></li>
-        <li><a [routerLink]="['#']" routerLinkActive="router-link-active" >FLOOR PLAN</a></li>
-      </ul>
+			<ul class="flex justify-between items-center text-white gap-5">
+				<li class="text-[#F1BC6C]">
+					<a routerLink="/home">HOME</a>
+				</li>
+				<li>
+					<a routerLink="/about" routerLinkActive="router-link-active"
+					>ABOUT US</a
+				>
+				</li>
+				<li>
+					<a
+						routerLink="/contact"
+						routerLinkActive="router-link-active"
+						routerLinkActive="router-link-active"
+						>CONTACT US</a
+					>
+				</li>
+				<li>
+					<a
+						routerLink="/userAdd"
+						routerLinkActive="router-link-active"
+						>ADD YOUR HOUSE</a
+					>
+				</li>
+			</ul>
 
-      <div class="navButtons uppercase text-white flex gap-3">
-        <button routerLink="['/login']">LOG IN</button>
-        <button class="bg-blue-700 px-2" routerLink="/login">SIGN UP</button>
-      </div>
-    </div>
-  </nav>
+			<div class="navButtons uppercase text-white flex gap-3">
+				<button routerLink="/login">LOG IN</button>
+				<button class="bg-blue-700  p-2 rounded-xl" routerLink="/login">
+					SIGN UP
+				</button>
+			</div>
+		</div>
+	</nav>
 
-  <!-- nav-end -->
+	<!-- nav-end -->
 
-  <!-- filter search -->
-  <div
-    class="searchBar_Container border-2 border-white min-h-[29px] w-[520px] mx-auto rounded-xl my-6 uppercase flex justify-evenly text-center text-white items-center"
-  >
-    <p>Price</p>
-    <p class="border-l-2 border-r-2 px-5">Location</p>
-    <p>Check In</p>
-    <div class="searchBar w-2"><input type="search" class="w-full" /></div>
-  </div>
-  <!-- filter search -->
+	<!-- filter search -->
+	<div
+		class="searchBar_Container border-2 border-white min-h-[29px] w-[520px] mx-auto rounded-xl my-6 uppercase flex justify-evenly text-center text-white items-center"
+	>
+		<p>Price</p>
+		<p class="border-l-2 border-r-2 px-5">Location</p>
+		<p>Check In</p>
+		<div class="searchBar w-2"><input type="search" class="w-full" /></div>
+	</div>
+	<!-- filter search -->
 
-  <!-- hero-card -->
-  <div
-    class="h-[251px] min-w-[600px] ml-auto mr-12 hero-card p-12 text-white absolute top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2"
-  >
-    <h1 class="w-[430px] text-3xl">
-      <span class="font-thin"> MODERN HOME. </span><br />
-      <span class="font-bold"> YOUR BEST HOME. </span>
-    </h1>
-    <p class="w-[247px] text-sm my-2">
-      Easy Access to homes all over Jamaica, we provide the right environments and designs for you to choose.Feel free to take a look at the great offers our fellow Jamaicans have to showcase to you of their luxurious houses for rent.
-    </p>
-  </div>
+	<!-- hero-card -->
+	<div
+		class="h-[251px] min-w-[600px] ml-auto mr-12 hero-card p-12 text-white absolute top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2"
+	>
+		<h1 class="w-[430px] text-3xl">
+			<span class="font-thin"> MODERN HOME. </span><br />
+			<span class="font-bold"> YOUR BEST HOME. </span>
+		</h1>
+		<p class="w-[247px] text-sm my-2">
+			We provide the right
+			environments and designs for you to choose. Feel free to take a look
+			at the great offers our fellow Jamaicans have to showcase to you of
+			their luxurious houses for rent.
+		</p>
+	</div>
 </div>
 <!-- hero-end -->
 
 <div class="baseSection mx-auto w-[1156px] -my-48 z-20">
-  <h1 class="uppercase mt-5 text-white text-2xl font-bold">
-    Areas near you <br />
-    <span>
-      <svg
-        width="451"
-        height="9"
-        viewBox="0 0 451 9"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="mt-4"
-      >
-        <path d="M0 9V0H451L438.598 9H0Z" fill="#F1BC6C" />
-      </svg>
-    </span>
-    <br />
-  </h1>
-  <div class="imageAdds flex flex-wrap justify-between">
-    <div class="firstImage relative h-[268px]">
-      <img src="/assets/images/area_2.png" alt="" />
-      <div class="w-[250px] absolute bottom-20 right-10 text-white">
-        <h3>
-          <span class="text-[#F1BC6C] font-bold"> CHERRY GARDEN </span>
-        </h3>
-        <p class="">5 Bed Room | 4.5 Bath | 2.890 Sq.Ft Kingston</p>
-      </div>
-      <button
-        class="w-[99px] h-[19px] bg-blue-600 text-[10px] text-white px-2 rounded-md absolute right-10 bottom-10"
-      >
-        $500USD | RENT
-      </button>
-    </div>
-    <div class="secondImage mt-10 relative h-[268px]">
-      <img src="/assets/images/area_2.png" alt="" />
-      <div class="w-[250px] absolute bottom-20 right-10 text-white">
-        <h3>
-          <span class="text-[#F1BC6C] font-bold"> CHERRY GARDEN </span>
-        </h3>
-        <p>5 Bed Room | 4.5 Bath | 2.890 Sq.Ft Kingston</p>
-      </div>
-      <button
-        class="w-[99px] h-[19px] bg-blue-600 text-[10px] text-white px-2 rounded-md absolute right-10 bottom-10"
-      >
-        $500USD | RENT
-      </button>
-    </div>
-    <div class="broad-image h-[208px] w-full mt-10"></div>
+	<h1 class="uppercase mt-5 text-white text-2xl font-bold">
+		Areas near you <br />
+		<span>
+			<svg
+				width="451"
+				height="9"
+				viewBox="0 0 451 9"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				class="mt-4"
+			>
+				<path d="M0 9V0H451L438.598 9H0Z" fill="#F1BC6C" />
+			</svg>
+		</span>
+		<br />
+	</h1>
+	<div class="imageAdds flex flex-wrap justify-between">
+		<div class="firstImage relative h-[268px]">
+			<img src="/assets/images/area_2.png" alt="" />
+			<div class="w-[250px] absolute bottom-20 right-10 text-white">
+				<h3>
+					<span class="text-[#F1BC6C] font-bold">
+						CHERRY GARDEN
+					</span>
+				</h3>
+				<p class="">5 Bed Room | 4.5 Bath | 2.890 Sq.Ft Kingston</p>
+			</div>
+			<button
+				class="w-[99px] h-[19px] bg-blue-600 text-[10px] text-white px-2 rounded-md absolute right-10 bottom-10"
+			>
+				$500USD | RENT
+			</button>
+		</div>
+		<div class="secondImage mt-10 relative h-[268px]">
+			<img src="/assets/images/area_2.png" alt="" />
+			<div class="w-[250px] absolute bottom-20 right-10 text-white">
+				<h3>
+					<span class="text-[#F1BC6C] font-bold">
+						CHERRY GARDEN
+					</span>
+				</h3>
+				<p>5 Bed Room | 4.5 Bath | 2.890 Sq.Ft Kingston</p>
+			</div>
+			<button
+				class="w-[99px] h-[19px] bg-blue-600 text-[10px] text-white px-2 rounded-md absolute right-10 bottom-10"
+			>
+				$500USD | RENT
+			</button>
+		</div>
+		<div class="broad-image h-[208px] w-full mt-10"></div>
+		<div
+			class="house-listing grid grid-flow-row lg:grid-cols-2 gap-6 mt-10"
+			*ngFor="let home of homes | paginate:{
+				itemsPerPage: tableSize,
+				currentPage: page,
+				totalItems: count
+			}; let i = index" 
+		>
+			<div>
+				<img src="/assets/images/listing.png" alt="" />
+			</div>
+			<div>
+				<div class="houseCard">
+					<div class="cardInfo">
+						<div class="address mb-5">
+							<h2>{{ home.address }}</h2>
+							<h3>{{ home.price | currency }} Monthly</h3>
+						</div>
+						<div class="data">
+							<p>
+								{{ home.description }}
+							</p>
+						</div>
+					</div>
+					<div class="navigation mt-5 flex gap-5">
+						<button
+							(click)="modalPopUp(home._id!)"
+							class="bg-blue-600 text-white rounded-lg px-5 py-1"
+						>
+							View More
+						</button>
+						<button routerLink="/null">Learn More</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="flexMe">
+			<div>
+				<pagination-controls
+				previousLabel="prev"
+				nextLabel="next"
+				(pageChange)="onDataChange($event)"
+				>
+				</pagination-controls>
+			</div>
+			<div>
+				<select (change)=" onSizeChange($event)">
+					<option *ngFor="let size of tableSizes">
+						{{size}}
+					</option>
+				</select>
+			</div>
+		</div>
+		<!--footer -->
+		<div class="modal" #modal>
+			<app-house-details
+        *ngIf="spHome"
+				class="modalDetails"
+				(close)="closeModal($event)"
+				[boom]="spHome"
+			></app-house-details>
+		</div>
+	</div>
+	<footer>
+		<hr class="line" />
 
-    <div
-      class="house-listing grid grid-flow-row lg:grid-cols-2 gap-6 mt-10"
-      *ngFor="let home of homes"
-    >
-      <div>
-        <img src="/assets/images/listing.png" alt="" />
-      </div>
-      <div>
-        <div class="houseCard">
-          <div class="cardInfo">
-            <div class="address mb-5">
-              <h2>{{ home.address }}</h2>
-              <h3>{{ home.price | currency }} Monthly</h3>
-            </div>
-            <div class="data">
-              <p>
-                {{ home.description }}
-              </p>
-            </div>
-          </div>
-          <div class="navigation mt-5 flex gap-5">
-            <button
-              (click)="modalPopUp(home._id!)"
-              class="bg-blue-600 text-white rounded-lg px-5 py-1"
-            >
-            View More
-            </button>
-            <button>Learn More</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <mat-paginator
-      [length]="100"
-      [pageSize]="10"
-      [pageSizeOptions]="[5, 10, 25, 100]"
-      aria-label="Select page"
-    >
-    </mat-paginator>
-    <!--footer -->
-    <div class="modal" #modal>
-      <app-house-details
-        class="modalDetails"
-        (close)="closeModal($event)"
-        [boom] = 'spHome'
-      ></app-house-details>
-    </div>
-  </div>
-  <footer>
-    <hr class="line" />
+		<div class="footP1">
+			<ul>
+				<h3>ABOUT US</h3>
 
-    <div class="footP1">
-      <ul>
-        <h3>ABOUT US</h3>
+				<a href="#"><li>Contact Info</li></a>
+				<a href="#"><li>News Hub</li></a>
+				<a href="#"><li>Social Media</li></a>
+			</ul>
 
-        <a href="#"><li>Contact Info</li></a>
-        <a href="#"><li>News Hub</li></a>
-        <a href="#"><li>Social Media</li></a>
-      </ul>
+			<ul>
+				<h3>CUSTOMER SERVICE</h3>
 
-      <ul>
-        <h3>CUSTOMER SERVICE</h3>
+				<a href="#"><li>Help Center</li></a>
+				<a href="#"><li>Message Us</li></a>
+				<a href="#"><li>Comment/Complaint</li></a>
+			</ul>
 
-        <a href="#"><li>Help Center</li></a>
-        <a href="#"><li>Message Us</li></a>
-        <a href="#"><li>Comment/Complaint</li></a>
-      </ul>
+			<ul>
+				<h3>SITE SUPPORT</h3>
 
-      <ul>
-        <h3>SITE SUPPORT</h3>
+				<a href="#"><li>Login Help</li></a>
+				<a href="#"><li>Site Map</li></a>
+				<a href="#"><li>Browser Compatibility</li></a>
+				<a href="#"><li>Accessibility</li></a>
+			</ul>
 
-        <a href="#"><li>Login Help</li></a>
-        <a href="#"><li>Site Map</li></a>
-        <a href="#"><li>Browser Compatibility</li></a>
-        <a href="#"><li>Accessibility</li></a>
-      </ul>
+			<ul>
+				<h3>POLICIES</h3>
 
-      <ul>
-        <h3>POLICIES</h3>
-
-        <a href="#"><li>Customer Commitment</li></a>
-        <a href="#"><li>Cookies, Privacy & Security</li></a>
-        <a href="#"><li>(PDF)</li></a>
-      </ul>
-    </div>
-  </footer>
+				<a href="#"><li>Customer Commitment</li></a>
+				<a href="#"><li>Cookies, Privacy & Security</li></a>
+				<a href="#"><li>(PDF)</li></a>
+			</ul>
+		</div>
+	</footer>
 </div>
