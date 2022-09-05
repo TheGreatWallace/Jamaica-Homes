@@ -25,8 +25,10 @@ loginUsers(data: any): void {
    this.usersService.authenticateUsers(data).subscribe(
     (result: any)=>{
       console.log(result);
-      window.localStorage.setItem('token', result.token);
-      this.router.navigate(["/admin"])
+      if(result.token){
+        window.localStorage.setItem('token', result.token);
+        this.router.navigate(["/admin"])
+      }
     }
   )
   console.log(data);

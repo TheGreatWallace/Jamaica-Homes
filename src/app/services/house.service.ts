@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
 import { House } from '../models/houses';
 import { Observable, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HouseService {
   [x: string]: any;
-  REST_API_URL = "http://localhost:4000/api/Jamaica-Homes";
+  REST_API_URL = `${environment.REST_API_URL}/api/Jamaica-Homes`;
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient ) { }
