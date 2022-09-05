@@ -3,7 +3,7 @@
     <div class="formWrapper">
         <form #signupForm ="ngForm" (submit)="signupUsers(signupForm.value)">
             <h1 style="font-size: 30px; text-align:center">SIGN UP</h1>
-            <input placeholder="Username" type="text" name="username" ngModel >
+            <input placeholder="Username" type="text" name="username" pattern="/^[a-zA-Z]+ [a-zA-Z]+$/" ngModel >
             <input placeholder="Password" type="password" name="password" ngModel>
             <button>Submit</button>
         </form>

@@ -1,53 +1,122 @@
 <div class="formContainer">
-  <div class="border">
-    <div class="aesthetics">
-      <img src="/assets/images/pexels-tobias-bjørkli-2119714.jpg"  alt="">
-    </div>
-      <div class="formWrapper">
-        <form action="">
-          <h1>House Details</h1>
-          <div class="inputs">
-            <div class="labels">
-              <label for="address">Address:</label>
-              <textarea name="address" id="address" cols="30" rows="3" [(ngModel)]="house.address"></textarea>
-            </div>
-            <div class="labels">
-              <label for="description">Home Description:</label>
-              <textarea
-                name="description"
-                id="description"
-                cols="30"
-                rows="4"
-                [(ngModel)]="house.description"
-              ></textarea>
-            </div>
-            <div class="labels">
-              <label for="bedrooms">Bedrooms:</label>
-              <input type="number" name="bedrooms" [(ngModel)]="house.bedrooms"/>
-            </div>
-            <div class="labels">
-              <label for="bathrooms">Bathrooms:</label>
-              <input type="number" name="bathrooms" [(ngModel)]="house.bathrooms" />
-            </div>
-            <div class="labels">
-              <label for="price">Rent Fee:</label>
-              <input type="number" name="price" placeholder="30000" [(ngModel)]="house.price"/>
-            </div>
-            <br /><br />
-            <h1>Landlord Details</h1>
-            <div class="labels">
-              <label for="landlord">Name:</label>
-              <input type="text" name="landlord" placeholder="Gregory Smith" [(ngModel)]="house.landlord" />
-            </div>
-          </div>
-          <div class="labels">
-            <label for="contact">Contact:</label>
-            <input type="tel" name="contact" placeholder="876-345-1290" [(ngModel)]="house.contact" />
-          </div>
-          <br />
-          <button type="submit" (click)="saveItem()">Submit</button>
-        </form>
-      </div>
-  </div>
-  </div>
-  
+	<div class="border">
+		<div class="aesthetics">
+			<img
+				src="/assets/images/pexels-tobias-bjørkli-2119714.jpg"
+				alt=""
+			/>
+		</div>
+		<div class="formWrapper">
+			<form action="" #addHouseForm="ngForm" novalidate>
+				<h1>House Details</h1>
+				<div class="inputs">
+					<div class="labels">
+						<label for="address">Address:</label>
+						<textarea
+							name="address"
+							id="address"
+							cols="30"
+							rows="3"
+							#address="ngModel"
+							[(ngModel)]="house.address"
+						></textarea>
+					</div>
+					<div
+						*ngIf="address?.touched && !address?.dirty"
+						style="color: red"
+					>
+						Cannot be empty!
+					</div>
+					<div class="labels">
+						<label for="description">Home Description:</label>
+						<textarea
+							name="description"
+							id="description"
+							cols="30"
+							rows="4"
+              #description="ngModel"
+							[(ngModel)]="house.description"
+						></textarea>
+					</div>
+					<div
+						*ngIf="description?.touched && !description?.dirty"
+						style="color: red"
+					>
+						Cannot be empty!
+					</div>
+					<div class="labels">
+						<label for="bedrooms">Bedrooms:</label>
+						<input
+							type="number"
+							name="bedrooms"
+							[(ngModel)]="house.bedrooms"
+							min="1"
+						/>
+					</div>
+					<div class="labels">
+						<label for="bathrooms">Bathrooms:</label>
+						<input
+							type="number"
+							name="bathrooms"
+							[(ngModel)]="house.bathrooms"
+							min="1"
+						/>
+					</div>
+					<div class="labels">
+						<label for="price">Rent Fee:</label>
+						<input
+							type="number"
+							name="price"
+							placeholder="30000"
+							[(ngModel)]="house.price"
+							min="1"
+						/>
+					</div>
+					<br /><br />
+					<h1>Landlord Details</h1>
+					<div class="labels">
+						<label for="landlord">Name:</label>
+						<input
+							type="text"
+							name="landlord"
+							placeholder="Gregory Smith"
+              #landlord="ngModel"
+							[(ngModel)]="house.landlord"
+						/>
+					</div>
+					<div
+						*ngIf="landlord?.touched && !landlord?.dirty"
+						style="color: red"
+					>
+						Cannot be empty!
+					</div>
+				</div>
+				<div class="labels">
+					<label for="contact">Contact:</label>
+					<input
+						type="tel"
+						name="contact"
+						placeholder="876-345-1290"
+            #contact="ngModel"
+						pattern="/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/"
+						[(ngModel)]="house.contact"
+					/>
+				</div>
+				<div
+					*ngIf="contact?.touched && !contact?.dirty"
+					style="color: red"
+				>
+					Cannot be empty!
+				</div>
+				<br />
+				<button
+					type="submit"
+					(click)="saveItem()"
+					[disabled]="!addHouseForm.valid"
+				>
+					Submit
+				</button>
+			</form>
+		</div>
+	</div>
+</div>

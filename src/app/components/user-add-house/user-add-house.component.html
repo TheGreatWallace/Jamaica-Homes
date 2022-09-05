@@ -9,8 +9,12 @@
           <div class="inputs">
             <div class="labels">
               <label for="address">Address:</label>
-              <textarea name="address" id="address" cols="30" rows="3" [(ngModel)]="house.address"></textarea>
+              <textarea name="address" id="address" cols="30" rows="3" #address="ngModel" [(ngModel)]="house.address"></textarea>
             </div>
+            <div
+					*ngIf="address?.touched && !address?.dirty"style="color: red">
+					Cannot be empty!
+				</div>
             <div class="labels">
               <label for="description">Home Description:</label>
               <textarea
@@ -18,9 +22,14 @@
                 id="description"
                 cols="30"
                 rows="4"
+                #description="ngModel"
                 [(ngModel)]="house.description"
               ></textarea>
             </div>
+            <div
+					*ngIf="description?.touched && !description?.dirty"style="color: red">
+					Cannot be empty!
+				</div>
             <div class="labels">
               <label for="bedrooms">Bedrooms:</label>
               <input type="number" name="bedrooms" [(ngModel)]="house.bedrooms"/>
@@ -37,13 +46,21 @@
             <h1>Landlord Details</h1>
             <div class="labels">
               <label for="landlord">Name:</label>
-              <input type="text" name="landlord" placeholder="Gregory Smith" [(ngModel)]="house.landlord" />
+              <input type="text" name="landlord" placeholder="Gregory Smith" #landlord="ngModel" [(ngModel)]="house.landlord" />
             </div>
+            <div
+					*ngIf="landlord?.touched && !landlord?.dirty"style="color: red">
+					Cannot be empty!
+				</div>
           </div>
           <div class="labels">
             <label for="contact">Contact:</label>
-            <input type="tel" name="contact" placeholder="876-345-1290" [(ngModel)]="house.contact" />
+            <input type="tel" name="contact" placeholder="876-345-1290" #contact="ngModel" [(ngModel)]="house.contact" />
           </div>
+          <div
+					*ngIf="contact?.touched && !contact?.dirty"style="color: red">
+					Cannot be empty!
+				</div>
           <br />
           <button type="submit" (click)="saveItem()">Submit</button>
         </form>

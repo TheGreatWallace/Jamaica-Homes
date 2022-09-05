@@ -59,15 +59,19 @@
     <div class="contactForm">
       <h2>CONTACT FORM</h2>
       <div class="formWrapper">
-         <input type="text" placeholder="Name(Required)">
-         <br>
-         <input type="text" placeholder="Email(Required)">
-         <br>
-         <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-         <br>
-         <button class="formbutton">Submit</button>
+       <form action="https://formsubmit.co/carywallace26@gmail.com" method="POST">
+        <input type="text" placeholder="Name" required>
+        <br>
+        <input type="email" name="email" placeholder="Email Address">
+        <input type="hidden" name="_next" value="https://localhost:4200/home">
+        <br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+        <br>
+        <button class="formbutton" type="submit">Submit</button>
+       </form>
       </div>
     </div>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
  </div>
  <footer>
   <hr class="line" />
@@ -107,3 +111,4 @@
     </ul>
   </div>
 </footer>
+
