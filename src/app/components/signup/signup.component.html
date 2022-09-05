@@ -1,7 +1,7 @@
 <div class="formContainer">
     <div class="overlay">
     <div class="formWrapper">
-        <form #signupForm ="ngForm" (submit)="signupUsers(signupForm)">
+        <form #signupForm ="ngForm" (submit)="signupUsers(signupForm.value)">
             <h1 style="font-size: 30px; text-align:center">SIGN UP</h1>
             <input placeholder="Username" type="text" name="username" ngModel >
             <input placeholder="Password" type="password" name="password" ngModel>
