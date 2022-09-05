@@ -12,7 +12,7 @@
 
 .hero-overlay{
     background:linear-gradient(to right, rgba(0, 24, 47, 0.62)  0%, rgba(0, 24, 47, 0.62) 50%, rgba(0, 24, 47, 0.62) 100%),
-    url('https://s3-alpha-sig.figma.com/img/a731/7c5f/e4588caa4e058178e0eeef893257ac15?Expires=1662336000&Signature=aeJhBQIdFjZvwLxZvWuzqXPc8o7KDWf4qu~0-jJWidc1VkYEVV4wqI0H~nJBK5Y8dXiVKh4jg-OIG5l~a~SDVW~5oDTRTYy84FKCECHpW~Yr3WfWBTFbWQQ5jTxrK3cVCv0im9PUqDh-6-hREYmKa18hRx3uNW9aaRnyAi-LaQM3eO8i9bZwjZwgdioM3YAfHzoVoYoylPocs6sy6yUo8I4dL2BhBmmBAVCaIaMgGwsr9Jgayb~UdjtEwlcSpZv4zSusNXmmTiP--3kCYgISN3DV6Q7bfC1Tg-~X5TJlNoMuebXnvee0x1EMmhhKvLmWe1YzjDQgjSjQwlcpGwjMLw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA') center/cover no-repeat;
+    url('/src/assets/images/top-background-image.jpg') center/cover no-repeat;
 }
 
 .hero-card{
