@@ -1,3 +1,4 @@
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { UserAddHouseComponent } from './components/user-add-house/user-add-house.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'edit/:id', component: UpdateFormComponent},
   { path: 'about', component: AboutUsComponent},
   { path: 'contact', component: ContactUsComponent},
+  { path: 'profile', component: UserProfileComponent},
   { path: 'null', component: UnderConstructionComponent}
 ];
 

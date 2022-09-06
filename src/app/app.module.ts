@@ -21,6 +21,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { UserAddHouseComponent } from './components/user-add-house/user-add-house.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SignupComponent } from './components/signup/signup.component';
     ContactUsComponent,
     UnderConstructionComponent,
     UserAddHouseComponent,
-    SignupComponent
+    SignupComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

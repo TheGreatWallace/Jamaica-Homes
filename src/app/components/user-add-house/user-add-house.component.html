@@ -1,4 +1,9 @@
 <div class="formContainer">
+  <div class=”fixed-icons”>
+		<b class="icon" routerLink="/home">
+			<img src="/assets/images/icons8-home.gif" alt="">
+		</b>
+	</div>
   <div class="border">
     <div class="aesthetics">
       <img src="/assets/images/pexels-tobias-bjørkli-2119714.jpg"  alt="">
@@ -32,15 +37,15 @@
 				</div>
             <div class="labels">
               <label for="bedrooms">Bedrooms:</label>
-              <input type="number" name="bedrooms" [(ngModel)]="house.bedrooms"/>
+              <input type="number" name="bedrooms" [(ngModel)]="house.bedrooms" min="1"/>
             </div>
             <div class="labels">
               <label for="bathrooms">Bathrooms:</label>
-              <input type="number" name="bathrooms" [(ngModel)]="house.bathrooms" />
+              <input type="number" name="bathrooms" [(ngModel)]="house.bathrooms" min="1"/>
             </div>
             <div class="labels">
               <label for="price">Rent Fee:</label>
-              <input type="number" name="price" placeholder="30000" [(ngModel)]="house.price"/>
+              <input type="number" name="price" placeholder="30000" [(ngModel)]="house.price" min="1"/>
             </div>
             <br /><br />
             <h1>Landlord Details</h1>

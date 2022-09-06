@@ -39,7 +39,7 @@
 
 form{
     width: 100%;
-    height: fit-content;
+    height: 41.9em;
     text-align: center;
     align-items: center;
     background-color:#94c4d2 ;
@@ -94,3 +94,23 @@ button{
     font-size: 20px;
     margin-bottom: 10px;
 }
+
+.fixed-icons{
+    background: transparent;
+    width: 25px;
+    position: fixed;
+    top: 25%;
+    left: 10px;
+    }
+
+.icon{
+    position:absolute;
+    margin-right: 8em;
+}
+    
+.icon img{
+    width: 4em;
+    height:auto;
+}
+    
+    
