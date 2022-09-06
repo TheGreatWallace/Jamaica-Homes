@@ -48,6 +48,12 @@ input[type="text"] {
         border-bottom: 2px solid white;
 }
 
+input[type="email"] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
 input[type="password"] {
     background: transparent;
     border-bottom: none;
