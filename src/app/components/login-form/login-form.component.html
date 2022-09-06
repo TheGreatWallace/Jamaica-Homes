@@ -4,6 +4,7 @@
         <form #loginForm ="ngForm" (submit)="loginUsers(loginForm.value)">
             <h1 style="font-size: 30px; text-align:center">LOGIN</h1>
             <input placeholder="Username" type="text" name="username" pattern="/^[a-zA-Z]+ [a-zA-Z]+$/" ngModel required>
+            <input placeholder="Email Address" type="email" name="email" ngModel  required>
             <input placeholder="Password" type="password" name="password" ngModel  required>
             <button>Submit</button>
         </form>
