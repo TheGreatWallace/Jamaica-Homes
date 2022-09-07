@@ -11,8 +11,6 @@ import {
 } from '@angular/core';
 import { House } from 'src/app/models/houses';
 
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { HomeComponent } from '../home/home.component';
 
 @Component({
     selector: 'app-house-details',

@@ -12,9 +12,12 @@ export class LoginFormComponent implements OnInit {
 
   users: Users = {
     username: '',
+    email: '',
     password: '',
     role: '',
   };
+
+  specialUser!: Users;
 
   constructor(private usersService: UsersService,private router: Router) { }
 
@@ -27,11 +30,20 @@ loginUsers(data: any): void {
       console.log(result);
       if(result.token){
         window.localStorage.setItem('token', result.token);
-        this.router.navigate(["/admin"])
+        if(result.role == 'User' || 'user' || 'USER')
+        this.router.navigate(["/profile"])
+        else{
+          this.router.navigate(["/admin"])
+        }
       }
     }
   )
-  console.log(data);
+}
+
+displayUserById(id: any): void {
+  this.usersService.findUsersById(id).subscribe((result) => {
+    this.specialUser = result;
+  })
 }
 
 }

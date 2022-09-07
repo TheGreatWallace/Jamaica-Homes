@@ -1,14 +1,43 @@
 <div class="formContainer">
-    <div class="overlay">
-    <div class="formWrapper">
-        <form #loginForm ="ngForm" (submit)="loginUsers(loginForm.value)">
-            <h1 style="font-size: 30px; text-align:center">LOGIN</h1>
-            <input placeholder="Username" type="text" name="username" pattern="/^[a-zA-Z]+ [a-zA-Z]+$/" ngModel required>
-            <input placeholder="Email Address" type="email" name="email" ngModel  required>
-            <input placeholder="Password" type="password" name="password" ngModel  required>
-            <button>Submit</button>
-        </form>
-    </div>
+	<div class="overlay">
+		<div class="formWrapper">
+			<form #loginForm="ngForm" (submit)="loginUsers(loginForm.value)">
+				<h1 style="font-size: 30px; text-align: center">LOGIN</h1>
+				<input
+					placeholder="Username"
+					type="text"
+					name="username"
+					pattern="/^[a-zA-Z]+ [a-zA-Z]+$/"
+					ngModel
+					required
+				/>
+				<input
+					placeholder="Email Address"
+					type="email"
+					name="email"
+					ngModel
+					required
+				/>
+				<input
+					placeholder="Password"
+					type="password"
+					name="password"
+					ngModel
+					required
+				/>
+				<input
+					placeholder="User OR Admin"
+					type="text"
+					name="role"
+					ngModel
+					required
+				/>
+				<button>Submit</button>
+			</form>
+		</div>
+        <br>
+        <div>
+            <h3 style="color:white">Don't have an account? <a routerLink="/signup">Sign up Today</a></h3>
+        </div>
+	</div>
 </div>
-</div>
-

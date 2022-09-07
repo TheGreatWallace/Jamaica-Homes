@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UsersService {
-  REST_API_URL = `${environment.REST_API_URL}/api/Jamaica-Homes`;
+  REST_API_URL = `${environment.REST_API_URL}/api/Jamaica-Homes/user`;
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
@@ -19,7 +19,19 @@ registerUsers(data: any): Observable<Users>{
 }
 
 authenticateUsers(data: any): Observable<Users>{
-  return this.http.post(this.REST_API_URL+"/login", data)
+  return this.http.post(this.REST_API_URL+"/login", data);
+}
+
+findUsers(): Observable<Users>{
+  return this.http.get(this.REST_API_URL);
+}
+
+findUsersById(id:any): Observable<Users>{
+  return this.http.get(`${this.REST_API_URL}/${id}`);
+}
+
+updateUserInfo(id:any, data:any): Observable<Users>{
+  return this.http.put(`${this.REST_API_URL}/${id}`, data);
 }
 
 
