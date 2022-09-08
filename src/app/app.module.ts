@@ -1,3 +1,4 @@
+import { AuthGuardGuard } from './auth-guard.guard';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -51,7 +52,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     NgxPaginationModule,
 
   ],
-  providers: [],
+  providers: [AuthGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AfterViewInit, Component } from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
 import { Users } from 'src/app/models/users';
@@ -22,7 +23,8 @@ export class UserProfileComponent implements AfterViewInit {
 
 	constructor(
 		private _usersService: UsersService,
-		private cookies: CookieService
+		private cookies: CookieService,
+		private router: Router
 	) { }
 
 	Users!: Users;
@@ -55,5 +57,12 @@ export class UserProfileComponent implements AfterViewInit {
 		this._usersService.updateUserInfo(id, data).subscribe((data) => {
 			this.updatedUser = data;
 		});
+	}
+
+	logOut():void{
+		if(localStorage.getItem('token')){
+			localStorage.removeItem('token')
+			this.router.navigate(['/login'])
+		}
 	}
 }

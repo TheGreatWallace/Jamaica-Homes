@@ -78,8 +78,8 @@ onSizeChange(event: any){
 
 logoutUsers(): void {
   window.localStorage.removeItem('token');
-  window.location.href = '/home';
-  // this.router.navigate(["/home"])
+  // window.location.href = '/home';
+  this.router.navigate(["/home"])
 }
 
 }

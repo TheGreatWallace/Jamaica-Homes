@@ -1,5 +1,8 @@
 <div class="formContainer">
 	<div class="overlay">
+		<div>
+            <h3 style="color:white">Don't have an account? <a routerLink="/signup">Sign up Today</a></h3>
+        </div>
 		<div class="formWrapper">
 			<form #loginForm="ngForm" (submit)="loginUsers(loginForm.value)">
 				<h1 style="font-size: 30px; text-align: center">LOGIN</h1>
@@ -21,9 +24,5 @@
 				<button>Submit</button>
 			</form>
 		</div>
-        <br>
-        <div>
-            <h3 style="color:white">Don't have an account? <a routerLink="/signup">Sign up Today</a></h3>
-        </div>
 	</div>
 </div>

@@ -1,3 +1,4 @@
+import { AuthGuardGuard } from './auth-guard.guard';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { UserAddHouseComponent } from './components/user-add-house/user-add-house.component';
@@ -20,13 +21,13 @@ const routes: Routes = [
   { path: 'details/:id', component: HouseDetailsComponent},
   { path: 'login', component: LoginFormComponent},
   { path: 'signup', component: SignupComponent},
-  { path: 'add', component: AddHouseComponent},
-  { path: 'userAdd', component: UserAddHouseComponent},
-  { path: 'admin', component: ActionsComponent},
-  { path: 'edit/:id', component: UpdateFormComponent},
+  { path: 'add', component: AddHouseComponent, canActivate:[AuthGuardGuard]},
+  { path: 'userAdd', component: UserAddHouseComponent,canActivate:[AuthGuardGuard]},
+  { path: 'admin', component: ActionsComponent,canActivate:[AuthGuardGuard]},
+  { path: 'edit/:id', component: UpdateFormComponent,canActivate:[AuthGuardGuard]},
   { path: 'about', component: AboutUsComponent},
   { path: 'contact', component: ContactUsComponent},
-  { path: 'profile', component: UserProfileComponent},
+  { path: 'profile', component: UserProfileComponent,canActivate:[AuthGuardGuard]},
   { path: 'null', component: UnderConstructionComponent}
 ];
 
