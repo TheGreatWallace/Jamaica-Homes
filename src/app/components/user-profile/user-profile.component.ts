@@ -27,17 +27,18 @@ export class UserProfileComponent implements AfterViewInit {
 
 	Users!: Users;
 
-	ngAfterViewInit() {
-    console.log("Hit!");    
+	ngAfterViewInit() {   
 		this.displayThisUser();
 	}
 
 	displayThisUser(): void {
-		let id = this.cookies.getCookie('uid');    
-    console.log(id);
+		let id = localStorage.getItem('id');
+		console.log(id);
 		this._usersService.findUsersById(id).subscribe({
+
       next:(result) => {
-        
+		console.log(result);
+
         this.specialUser = result;
       }, 
       error: (err) => console.log(err)

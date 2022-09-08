@@ -6,6 +6,7 @@ import { FormsModule} from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HouseDetailsComponent } from './components/house-details/house-details.component';
@@ -47,7 +48,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     MatPaginatorModule,
     BrowserAnimationsModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
 
   ],
   providers: [],
