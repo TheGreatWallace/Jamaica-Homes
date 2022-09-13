@@ -128,6 +128,12 @@ input[type="text"]{
     border-radius: 2px;
 }
 
+input[type="email"]{
+    border: #777 solid 1px;
+    height: 1.8em;
+    border-radius: 2px;
+}
+
 textarea{
     border: #777 solid 1px;
     border-radius: 5px;
